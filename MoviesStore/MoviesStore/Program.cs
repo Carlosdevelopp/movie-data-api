@@ -1,5 +1,10 @@
+using DataAccess.Contract;
+using DataAccess.Implementation;
 using DataAccess.Implementation.Base;
+using Infrastructure.Contract;
+using Infrastructure.Implementation;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +15,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Conexión a SQL Server
+//Configuración del DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MOVIE_DB_CONNECTION")));
+
+builder.Services.AddScoped<IMoviesDataAccess,MoviesDataAccess>();
+builder.Services.AddScoped<IMoviesInfrastructure, MoviesInfrastructure>();
+
 
 var app = builder.Build();
 

@@ -18,6 +18,7 @@ namespace DataAccess.Implementation.Base
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Movies>().HasKey(m => m.MovieId); // Configura la clave primaria
         }
     }
 }
