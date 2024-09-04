@@ -27,6 +27,16 @@ namespace DataAccess.Implementation
 
             return movies;
         }
+
+        //Traer un registro 
+        public Movies GetMovie(int movieId)
+        {
+            Movies movie = (from u in _dbContext.Movies
+                            where u.MovieId == movieId
+                            select u).FirstOrDefault();
+
+            return movie;
+        }
         #endregion
     }
 }

@@ -8,10 +8,10 @@ namespace Infrastructure.DTO
 {
     public class MoviesDTO
     {
-        public string TituloM { get; set; }
-        public string DescriptionM { get; set; }
-        public int RunningM { get; set; }
-        public DateTime ReleaseM { get; set; }
+        public string TituloMovie { get; set; }
+        public string DescriptionMovie { get; set; }
+        public int RunningMovie { get; set; }
+        public DateTime ReleaseMovie { get; set; }
         public int Genre { get; set; }
         public int Award { get; set; }
     }

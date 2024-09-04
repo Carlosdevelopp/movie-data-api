@@ -11,6 +11,8 @@ namespace DataAccess.Contract
     {
         #region GET
         List<Movies> GetMovies();
+
+        Movies GetMovie(int movieId);
         #endregion
     }
 }

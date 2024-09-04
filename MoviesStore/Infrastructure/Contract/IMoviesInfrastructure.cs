@@ -11,6 +11,7 @@ namespace Infrastructure.Contract
     {
         #region GET
         List<MoviesDTO> GetMovies();
+        MoviesDTO GetMovie(int MovieId);
         #endregion
     }
 }

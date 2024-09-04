@@ -27,13 +27,31 @@ namespace Infrastructure.Implementation
 
             List<MoviesDTO> moviesDTOs = movies.Select(o => new MoviesDTO
             {
-                TituloM = o.Title,
-                DescriptionM = o.Description,
-                RunningM = o.RunningTime,
-                ReleaseM = o.Release
+                TituloMovie = o.Title,
+                DescriptionMovie = o.Description,
+                RunningMovie = o.RunningTime,
+                ReleaseMovie = o.Release,
+                Award = o.AwardId,
+                Genre = o.GenreId
             }).ToList();
 
             return moviesDTOs;
+        }
+
+        //Traer un registro 
+        public MoviesDTO GetMovie(int MovieId)
+        {
+            Movies movie = _moviesDA.GetMovie(MovieId);
+
+            MoviesDTO movieDTO = new MoviesDTO
+            {
+                TituloMovie = movie.Title,
+                DescriptionMovie = movie.Description,
+                RunningMovie = movie.RunningTime,
+                ReleaseMovie = movie.Release,
+            };
+
+            return movieDTO;
         }
         #endregion
     }
