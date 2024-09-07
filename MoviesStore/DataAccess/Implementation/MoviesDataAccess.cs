@@ -1,6 +1,7 @@
 ﻿using DataAccess.Contract;
 using DataAccess.Implementation.Base;
 using DataAccess.Models.Tables;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,17 @@ namespace DataAccess.Implementation
         }
 
         #region GET
-        //Traer una lista de todos los registros
+        //Get a record
+        public Movies GetMovie(int movieId)
+        {
+            Movies movie = (from u in _dbContext.Movies
+                            where u.MovieId == movieId
+                            select u).FirstOrDefault();
+
+            return movie;
+        }
+
+        //Get a list of records 
         public List<Movies> GetMovies()
         {
             List<Movies> movies = (from u in _dbContext.Movies
@@ -28,14 +39,13 @@ namespace DataAccess.Implementation
             return movies;
         }
 
-        //Traer un registro 
-        public Movies GetMovie(int movieId)
+        public List<Movies> GetMoviesDetails()
         {
-            Movies movie = (from u in _dbContext.Movies
-                            where u.MovieId == movieId
-                            select u).FirstOrDefault();
+            List<Movies> moviesDetails = _dbContext.Movies
+                .Include(a => a.Awards)
+                .Include(o => o.Genres).ToList();
 
-            return movie;
+            return moviesDetails;
         }
         #endregion
     }

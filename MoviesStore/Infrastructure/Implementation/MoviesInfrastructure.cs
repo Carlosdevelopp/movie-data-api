@@ -20,7 +20,23 @@ namespace Infrastructure.Implementation
         }
 
         #region GET
-        //Lista (Method) para traer todos los registros
+        //Get a record (syntax)
+        public MoviesDTO GetMovie(int MovieId)
+        {
+            Movies movie = _moviesDA.GetMovie(MovieId);
+
+            MoviesDTO movieDTO = new MoviesDTO
+            {
+                TituloMovie = movie.Title,
+                DescriptionMovie = movie.Description,
+                RunningMovie = movie.RunningTime,
+                ReleaseMovie = movie.Release,
+            };
+
+            return movieDTO;
+        }
+
+        //Get a list of record (Method syntax) 
         public List<MoviesDTO> GetMovies()
         {
             List<Movies> movies = _moviesDA.GetMovies();
@@ -38,21 +54,22 @@ namespace Infrastructure.Implementation
             return moviesDTOs;
         }
 
-        //Traer un registro 
-        public MoviesDTO GetMovie(int MovieId)
+        public List<AwardsDTO> GetMoviesDetails()
         {
-            Movies movie = _moviesDA.GetMovie(MovieId);
+            List<Movies> movies = _moviesDA.GetMoviesDetails();
 
-            MoviesDTO movieDTO = new MoviesDTO
+            List<AwardsDTO> awardsDTO = movies.Select(o => new AwardsDTO
             {
-                TituloMovie = movie.Title,
-                DescriptionMovie = movie.Description,
-                RunningMovie = movie.RunningTime,
-                ReleaseMovie = movie.Release,
-            };
+                TitleMovie = o.Title,
+                DescriptionMovie = o.Description,
+                //ReleaseMovie = o.Release,
+                //RunningTime = o.RunningTime,
+                //Genre = o.GenreId,
+                //Award = o.AwardId
+            }).ToList();
 
-            return movieDTO;
-        }
+            return awardsDTO; 
+;       }
         #endregion
     }
 }

@@ -10,5 +10,6 @@ namespace DataAccess.Models.Tables
     {
         public int GenreId { get; set; }
         public string Genre { get; set; }
+        public ICollection<Movies> Movies { get; set; }
     }
 }

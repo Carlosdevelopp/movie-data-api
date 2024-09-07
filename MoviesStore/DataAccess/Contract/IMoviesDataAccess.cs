@@ -10,9 +10,9 @@ namespace DataAccess.Contract
     public interface IMoviesDataAccess
     {
         #region GET
-        List<Movies> GetMovies();
-
         Movies GetMovie(int movieId);
+        List<Movies> GetMovies();
+        List<Movies> GetMoviesDetails();
         #endregion
     }
 }

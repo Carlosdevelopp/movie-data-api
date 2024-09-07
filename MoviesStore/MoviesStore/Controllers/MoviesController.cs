@@ -42,6 +42,20 @@ namespace MoviesStore.Controllers
                return BadRequest("error");
             }
         }
+
+        [HttpGet("GetMoviesDetails")]
+        public IActionResult GetMoviesDetails()
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetMoviesDetails());
+            }
+            catch (Exception)
+            {
+
+                return BadRequest("error");
+            }
+        }
         #endregion
     }
 }
