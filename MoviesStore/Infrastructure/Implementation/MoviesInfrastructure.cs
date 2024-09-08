@@ -47,29 +47,27 @@ namespace Infrastructure.Implementation
                 DescriptionMovie = o.Description,
                 RunningMovie = o.RunningTime,
                 ReleaseMovie = o.Release,
-                Award = o.AwardId,
-                Genre = o.GenreId
             }).ToList();
 
             return moviesDTOs;
         }
 
-        public List<AwardsDTO> GetMoviesDetails()
-        {
-            List<Movies> movies = _moviesDA.GetMoviesDetails();
+//        public List<AwardsDTO> GetMoviesDetails()
+//        {
+//            List<Movies> movies = _moviesDA.GetMoviesDetails();
 
-            List<AwardsDTO> awardsDTO = movies.Select(o => new AwardsDTO
-            {
-                TitleMovie = o.Title,
-                DescriptionMovie = o.Description,
-                //ReleaseMovie = o.Release,
-                //RunningTime = o.RunningTime,
-                //Genre = o.GenreId,
-                //Award = o.AwardId
-            }).ToList();
+//            List<AwardsDTO> awardsDTO = movies.Select(o => new AwardsDTO
+//            {
+//                TitleMovie = o.Title,
+//                DescriptionMovie = o.Description,
+//                //ReleaseMovie = o.Release,
+//                //RunningTime = o.RunningTime,
+//                //Genre = o.GenreId,
+//                //Award = o.AwardId
+//            }).ToList();
 
-            return awardsDTO; 
-;       }
+//            return awardsDTO; 
+//;       }
         #endregion
     }
 }

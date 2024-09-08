@@ -17,6 +17,19 @@ namespace MoviesStore.Controllers
         }
 
         #region GET
+        [HttpGet("GetMovie")]
+        public IActionResult GetMovie(int movieId)
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetMovie(movieId));
+            }
+            catch (Exception)
+            {
+                return BadRequest("error");
+            }
+        }
+
         [HttpGet("GetMovies")]  
         public IActionResult GetMovies()
         {
@@ -30,32 +43,19 @@ namespace MoviesStore.Controllers
             }
         }
 
-        [HttpGet("GetMovie")]
-        public IActionResult GetMovie(int movieId)
-        {
-            try
-            {
-                return Ok(_moviesInfrastructure.GetMovie(movieId));
-            }
-            catch (Exception)
-            {
-               return BadRequest("error");
-            }
-        }
+        //[HttpGet("GetMoviesDetails")]
+        //public IActionResult GetMoviesDetails()
+        //{
+        //    try
+        //    {
+        //        return Ok(_moviesInfrastructure.GetMoviesDetails());
+        //    }
+        //    catch (Exception)
+        //    {
 
-        [HttpGet("GetMoviesDetails")]
-        public IActionResult GetMoviesDetails()
-        {
-            try
-            {
-                return Ok(_moviesInfrastructure.GetMoviesDetails());
-            }
-            catch (Exception)
-            {
-
-                return BadRequest("error");
-            }
-        }
+        //        return BadRequest("error");
+        //    }
+        //}
         #endregion
     }
 }

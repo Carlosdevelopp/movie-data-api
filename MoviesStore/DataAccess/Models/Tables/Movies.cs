@@ -14,9 +14,5 @@ namespace DataAccess.Models.Tables
         public string Description { get; set; }
         public int RunningTime {  get; set; }
         public DateTime Release { get; set; }
-        public int AwardId { get; set; }
-        public int GenreId { get; set; }
-        public Awards Awards { get; set; }
-        public Genres Genres {  get; set; }
     }
 }
