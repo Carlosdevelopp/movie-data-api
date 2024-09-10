@@ -31,10 +31,12 @@ namespace Infrastructure.Implementation
                 DescriptionMovie = movie.Description,
                 RunningMovie = movie.RunningTime,
                 ReleaseMovie = movie.Release,
+                GenreId = movie.GenreId,
+                AwardId = movie.AwardId,
             };
 
             return movieDTO;
-        }
+        } 
 
         //Get a list of record (Method syntax) 
         public List<MoviesDTO> GetMovies()
