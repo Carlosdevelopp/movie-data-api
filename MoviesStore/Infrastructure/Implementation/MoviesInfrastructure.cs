@@ -56,23 +56,23 @@ namespace Infrastructure.Implementation
             return moviesDTOs;
         }
 
-        //public List<AwardsDTO> GetMoviesDetails()
-        //{
-        //    List<Movies> movies = _moviesDA.GetMoviesDetails();
+        public List<AwardsDTO> GetMoviesDetails()
+        {
+            List<Movies> movies = _moviesDA.GetMoviesDetails();
 
-        //    List<AwardsDTO> _movies = (from u in movies
-        //                               select new AwardsDTO
-        //                               {
-        //                                   TitleMovie = u.Title,
-        //                                   DescriptionMovie = u.Description,
-        //                                   ReleaseMovie = u.Release.ToString(),
-        //                                   RunningTimeMovie = u.RunningTime.ToString(),
-        //                                   Genre = u.Description,
-        //                                   Award = u.Description
-        //                               }).ToList();
+            List<AwardsDTO> _movies = (from u in movies
+                                       select new AwardsDTO
+                                       {
+                                           TitleMovie = u.Title,
+                                           DescriptionMovie = u.Description,
+                                           ReleaseMovie = u.Release.ToString(),
+                                           RunningTimeMovie = u.RunningTime.ToString(),
+                                           Genre = u.Description,
+                                           Award = u.Description
+                                       }).ToList();
 
-        //    return _movies;
-        //}
+            return _movies;
+        }
         #endregion
     }
 }

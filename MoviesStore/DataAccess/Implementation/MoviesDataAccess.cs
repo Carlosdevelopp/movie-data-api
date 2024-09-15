@@ -39,16 +39,16 @@ namespace DataAccess.Implementation
             return movies;
         }
 
-        //public List<Movies> GetMoviesDetails()
-        //{
-        //    List<Movies> moviesdetails = (from u in _dbContext.Movies
-        //                                  select u)
-        //                                 .Include(o => o.Awards)
-        //                                 .Include(o => o.Genres)
-        //                                 .ToList();
+        public List<Movies> GetMoviesDetails()
+        {
+            List<Movies> moviesdetails = (from u in _dbContext.Movies
+                                          select u)
+                                         .Include(o => o.Awards)
+                                         .Include(o => o.Genres)
+                                         .ToList();
 
-        //    return moviesdetails;
-        //}
+            return moviesdetails;
+        }
         #endregion
     }
 }

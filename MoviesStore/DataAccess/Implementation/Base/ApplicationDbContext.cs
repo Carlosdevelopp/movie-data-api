@@ -14,16 +14,33 @@ namespace DataAccess.Implementation.Base
 
         //DbSet para las entidades
         public DbSet<Movies> Movies { get; set; }
-        //public DbSet<Awards> Awards { get; set; }
-        //public DbSet<Genres> Genres { get; set; }
+        public DbSet<Awards> Awards { get; set; }
+        public DbSet<Genres> Genres { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Movies>().HasKey(m => m.MovieId); // Configura la clave primaria
-            //modelBuilder.Entity<Awards>().HasNoKey();
-            //modelBuilder.Entity<Genres>().HasNoKey();
 
+            // Configuración de la relación uno a muchos
+            modelBuilder.Entity<Movies>()
+                .HasOne(m => m.Genres)
+                .WithMany(g => g.Movies)
+                .HasForeignKey(m => m.GenreId);
+
+            modelBuilder.Entity<Movies>()
+                .HasOne(a => a.Awards)
+                .WithMany(c => c.Movies)
+                .HasForeignKey(a => a.AwardId);
+
+            // Configuración de claves primarias y otras restricciones si es necesario
+            modelBuilder.Entity<Movies>()
+                .HasKey(m => m.MovieId); // Configura la clave primaria
+
+            modelBuilder.Entity<Awards>()
+                .HasKey(c => c.AwardId); // Clave primaria para Category
+
+            modelBuilder.Entity<Genres>()
+                .HasKey(p => p.GenreId); // Clave primaria para Product
         }
     }
 }

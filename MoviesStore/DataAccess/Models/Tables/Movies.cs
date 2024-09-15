@@ -17,8 +17,8 @@ namespace DataAccess.Models.Tables
         public int GenreId { get; set; }
         public int AwardId { get; set; }
 
-        //public virtual Awards Awards { get; set; }
-        //public virtual Genres Genres { get; set; }
+        public  virtual Awards Awards { get; set; }
+        public virtual Genres Genres { get; set; }
 
     }
 }

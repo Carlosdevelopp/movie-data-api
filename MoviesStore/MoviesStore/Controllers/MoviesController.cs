@@ -43,19 +43,19 @@ namespace MoviesStore.Controllers
             }
         }
 
-        //[HttpGet("GetMoviesDetails")]
-        //public IActionResult GetMoviesDetails()
-        //{
-        //    try
-        //    {
-        //        return Ok(_moviesInfrastructure.GetMoviesDetails());
-        //    }
-        //    catch (Exception)
-        //    {
+        [HttpGet("GetMoviesDetails")]
+        public IActionResult GetMoviesDetails()
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetMoviesDetails());
+            }
+            catch (Exception)
+            {
 
-        //        return BadRequest("error");
-        //    }
-        //}
+                return BadRequest("error");
+            }
+        }
         #endregion
     }
 }
