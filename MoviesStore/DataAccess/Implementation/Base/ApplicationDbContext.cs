@@ -14,11 +14,16 @@ namespace DataAccess.Implementation.Base
 
         //DbSet para las entidades
         public DbSet<Movies> Movies { get; set; }
+        //public DbSet<Awards> Awards { get; set; }
+        //public DbSet<Genres> Genres { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Movies>().HasKey(m => m.MovieId); // Configura la clave primaria
+            //modelBuilder.Entity<Awards>().HasNoKey();
+            //modelBuilder.Entity<Genres>().HasNoKey();
+
         }
     }
 }

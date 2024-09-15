@@ -41,11 +41,13 @@ namespace DataAccess.Implementation
 
         //public List<Movies> GetMoviesDetails()
         //{
-        //    List<Movies> moviesDetails = _dbContext.Movies
-        //        .Include(a => a.Awards)
-        //        .Include(o => o.Genres).ToList();
+        //    List<Movies> moviesdetails = (from u in _dbContext.Movies
+        //                                  select u)
+        //                                 .Include(o => o.Awards)
+        //                                 .Include(o => o.Genres)
+        //                                 .ToList();
 
-        //    return moviesDetails;
+        //    return moviesdetails;
         //}
         #endregion
     }

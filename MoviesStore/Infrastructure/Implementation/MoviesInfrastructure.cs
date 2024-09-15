@@ -42,34 +42,37 @@ namespace Infrastructure.Implementation
         public List<MoviesDTO> GetMovies()
         {
             List<Movies> movies = _moviesDA.GetMovies();
-
+            
             List<MoviesDTO> moviesDTOs = movies.Select(o => new MoviesDTO
             {
                 TituloMovie = o.Title,
                 DescriptionMovie = o.Description,
                 RunningMovie = o.RunningTime,
                 ReleaseMovie = o.Release,
+                GenreId = o.GenreId,
+                AwardId = o.AwardId
             }).ToList();
 
             return moviesDTOs;
         }
 
-//        public List<AwardsDTO> GetMoviesDetails()
-//        {
-//            List<Movies> movies = _moviesDA.GetMoviesDetails();
+        //public List<AwardsDTO> GetMoviesDetails()
+        //{
+        //    List<Movies> movies = _moviesDA.GetMoviesDetails();
 
-//            List<AwardsDTO> awardsDTO = movies.Select(o => new AwardsDTO
-//            {
-//                TitleMovie = o.Title,
-//                DescriptionMovie = o.Description,
-//                //ReleaseMovie = o.Release,
-//                //RunningTime = o.RunningTime,
-//                //Genre = o.GenreId,
-//                //Award = o.AwardId
-//            }).ToList();
+        //    List<AwardsDTO> _movies = (from u in movies
+        //                               select new AwardsDTO
+        //                               {
+        //                                   TitleMovie = u.Title,
+        //                                   DescriptionMovie = u.Description,
+        //                                   ReleaseMovie = u.Release.ToString(),
+        //                                   RunningTimeMovie = u.RunningTime.ToString(),
+        //                                   Genre = u.Description,
+        //                                   Award = u.Description
+        //                               }).ToList();
 
-//            return awardsDTO; 
-//;       }
+        //    return _movies;
+        //}
         #endregion
     }
 }
