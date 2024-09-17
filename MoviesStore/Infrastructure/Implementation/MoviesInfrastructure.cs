@@ -56,6 +56,7 @@ namespace Infrastructure.Implementation
             return moviesDTOs;
         }
 
+        //Get a list of details
         public List<AwardsDTO> GetMoviesDetails()
         {
             List<Movies> movies = _moviesDA.GetMoviesDetails();
@@ -67,8 +68,8 @@ namespace Infrastructure.Implementation
                                            DescriptionMovie = u.Description,
                                            ReleaseMovie = u.Release.ToString(),
                                            RunningTimeMovie = u.RunningTime.ToString(),
-                                           Genre = u.Description,
-                                           Award = u.Description
+                                           Genre = u.Genres.Genre,
+                                           Award = u.Awards.AwardTitle
                                        }).ToList();
 
             return _movies;
