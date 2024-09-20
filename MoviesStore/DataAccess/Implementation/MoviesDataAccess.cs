@@ -39,6 +39,17 @@ namespace DataAccess.Implementation
             return movies;
         }
 
+        public Movies GetMovieDetails(int movieId)
+        {
+            Movies moviedetails = (from u in _dbContext.Movies
+                                   where u.MovieId == movieId
+                                   select u).Include(o => o.Awards)
+                                            .Include(o => o.Genres)
+                                            .FirstOrDefault();
+
+            return moviedetails;
+        }
+
         public List<Movies> GetMoviesDetails()
         {
             List<Movies> moviesdetails = (from u in _dbContext.Movies

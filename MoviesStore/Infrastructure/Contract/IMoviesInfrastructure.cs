@@ -1,4 +1,5 @@
-﻿using Infrastructure.DTO;
+﻿using DataAccess.Models.Tables;
+using Infrastructure.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Infrastructure.Contract
         #region GET
         MoviesDTO GetMovie(int MovieId);
         List<MoviesDTO> GetMovies();
+        AwardsDTO GetMovieDetails(int MovieId);
         List<AwardsDTO> GetMoviesDetails();
         #endregion
     }

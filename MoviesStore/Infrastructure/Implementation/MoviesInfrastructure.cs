@@ -55,6 +55,23 @@ namespace Infrastructure.Implementation
 
             return moviesDTOs;
         }
+        
+        public AwardsDTO GetMovieDetails(int MovieId)
+        {
+            Movies movies = _moviesDA.GetMovieDetails(MovieId);
+
+            AwardsDTO _movies = new AwardsDTO
+            {
+                TitleMovie = movies.Title,
+                DescriptionMovie = movies.Description,
+                RunningTimeMovie = movies.RunningTime.ToString(),
+                ReleaseMovie = movies.Release.ToString(),
+                Genre = movies.Genres.Genre,
+                Award = movies.Awards.AwardTitle
+            };
+
+            return _movies;
+        }
 
         //Get a list of details
         public List<AwardsDTO> GetMoviesDetails()
