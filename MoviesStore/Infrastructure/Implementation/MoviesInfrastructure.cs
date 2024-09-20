@@ -20,7 +20,7 @@ namespace Infrastructure.Implementation
         }
 
         #region GET
-        //Get a record (syntax)
+        //Get a record Movie (syntax)
         public MoviesDTO GetMovie(int MovieId)
         {
             Movies movie = _moviesDA.GetMovie(MovieId);
@@ -38,7 +38,7 @@ namespace Infrastructure.Implementation
             return movieDTO;
         } 
 
-        //Get a list of record (Method syntax) 
+        //Get a list of records Movies
         public List<MoviesDTO> GetMovies()
         {
             List<Movies> movies = _moviesDA.GetMovies();
@@ -56,6 +56,7 @@ namespace Infrastructure.Implementation
             return moviesDTOs;
         }
         
+        //Get a record 
         public AwardsDTO GetMovieDetails(int MovieId)
         {
             Movies movies = _moviesDA.GetMovieDetails(MovieId);
@@ -73,7 +74,7 @@ namespace Infrastructure.Implementation
             return _movies;
         }
 
-        //Get a list of details
+        //Get a list of records (syntax)
         public List<AwardsDTO> GetMoviesDetails()
         {
             List<Movies> movies = _moviesDA.GetMoviesDetails();

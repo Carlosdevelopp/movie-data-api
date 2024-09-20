@@ -18,6 +18,7 @@ builder.Services.AddSwaggerGen();
 //Configuración del DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MOVIE_DB_CONNECTION")));
 
+//Registro de servicios
 builder.Services.AddScoped<IMoviesDataAccess,MoviesDataAccess>();
 builder.Services.AddScoped<IMoviesInfrastructure, MoviesInfrastructure>();
 

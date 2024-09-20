@@ -20,7 +20,7 @@ namespace DataAccess.Implementation
         }
 
         #region GET
-        //Get a record
+        //Get a record (Movies)
         public Movies GetMovie(int movieId)
         {
             Movies movie = (from u in _dbContext.Movies
@@ -30,7 +30,7 @@ namespace DataAccess.Implementation
             return movie;
         }
 
-        //Get a list of records 
+        //Get a list of records (Movies)
         public List<Movies> GetMovies()
         {
             List<Movies> movies = (from u in _dbContext.Movies
@@ -39,6 +39,7 @@ namespace DataAccess.Implementation
             return movies;
         }
 
+        //Get a record (MovieDetails)
         public Movies GetMovieDetails(int movieId)
         {
             Movies moviedetails = (from u in _dbContext.Movies
@@ -50,6 +51,7 @@ namespace DataAccess.Implementation
             return moviedetails;
         }
 
+        //Get a list of records (MoviesDetails)
         public List<Movies> GetMoviesDetails()
         {
             List<Movies> moviesdetails = (from u in _dbContext.Movies

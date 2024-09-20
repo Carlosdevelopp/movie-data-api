@@ -30,9 +30,9 @@ namespace DataAccess.Implementation.Base
                 .WithMany(c => c.Movies)
                 .HasForeignKey(a => a.AwardId);
 
-            // Configuración de claves primarias y otras restricciones si es necesario
+            // Configuración de claves primarias
             modelBuilder.Entity<Movies>()
-                .HasKey(m => m.MovieId); // Configura la clave primaria
+                .HasKey(m => m.MovieId); // Clave primaria para Movies
 
             modelBuilder.Entity<Awards>()
                 .HasKey(c => c.AwardId); // Clave primaria para Category
