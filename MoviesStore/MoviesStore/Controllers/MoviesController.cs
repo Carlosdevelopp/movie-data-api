@@ -70,5 +70,21 @@ namespace MoviesStore.Controllers
             }
         }
         #endregion
+
+        #region POST
+        [HttpPost("InsertMovie")]
+        public IActionResult InsertMovie(MoviesInsertDTO moviesInsertDTO)
+        {
+            try
+            {
+                _moviesInfrastructure.InsertMovie(moviesInsertDTO);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
+        #endregion
     }
 }

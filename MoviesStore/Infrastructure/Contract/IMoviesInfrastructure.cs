@@ -16,5 +16,9 @@ namespace Infrastructure.Contract
         AwardsDTO GetMovieDetails(int MovieId);
         List<AwardsDTO> GetMoviesDetails();
         #endregion
+
+        #region POST
+        void InsertMovie(MoviesInsertDTO moviesInsertDTO);
+        #endregion
     }
 }

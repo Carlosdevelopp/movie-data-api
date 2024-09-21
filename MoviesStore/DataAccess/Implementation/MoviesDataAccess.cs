@@ -63,5 +63,13 @@ namespace DataAccess.Implementation
             return moviesdetails;
         }
         #endregion
+
+        #region POST
+        public void InsertMovie(Movies movie)
+        {
+            _dbContext.Movies.Add(movie);
+            _dbContext.SaveChanges();
+        }
+        #endregion
     }
 }

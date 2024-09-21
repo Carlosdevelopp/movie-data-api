@@ -15,5 +15,9 @@ namespace DataAccess.Contract
         Movies GetMovieDetails(int movieId);
         List<Movies> GetMoviesDetails();
         #endregion
+
+        #region POST
+        void InsertMovie(Movies movie);
+        #endregion
     }
 }

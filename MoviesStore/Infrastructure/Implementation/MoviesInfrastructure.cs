@@ -20,7 +20,7 @@ namespace Infrastructure.Implementation
         }
 
         #region GET
-        //Get a record Movie (syntax)
+        //Get a record Movies by (syntax)
         public MoviesDTO GetMovie(int MovieId)
         {
             Movies movie = _moviesDA.GetMovie(MovieId);
@@ -74,7 +74,7 @@ namespace Infrastructure.Implementation
             return _movies;
         }
 
-        //Get a list of records (syntax)
+        //Get a list of records 
         public List<AwardsDTO> GetMoviesDetails()
         {
             List<Movies> movies = _moviesDA.GetMoviesDetails();
@@ -91,6 +91,22 @@ namespace Infrastructure.Implementation
                                        }).ToList();
 
             return _movies;
+        }
+        #endregion
+
+        #region POST
+        public void InsertMovie(MoviesInsertDTO moviesInsertDTO)
+        {
+            Movies movie = new();
+            {
+                movie.Title = moviesInsertDTO.TitleMovie;
+                movie.Description = moviesInsertDTO.DescriptionMovie;
+                movie.RunningTime = moviesInsertDTO.RunningTimeMovie;
+                movie.Release = moviesInsertDTO.ReleaseMovie;
+                movie.GenreId = moviesInsertDTO.Genre;
+                movie.AwardId = moviesInsertDTO.Award;
+            }
+            _moviesDA.InsertMovie(movie);
         }
         #endregion
     }
