@@ -71,5 +71,13 @@ namespace DataAccess.Implementation
             _dbContext.SaveChanges();
         }
         #endregion
+
+        #region PUT
+        public void UpdateMovie(Movies movie)
+        {
+            _dbContext.Movies.Update(movie);
+            _dbContext.SaveChanges();
+        }
+        #endregion
     }
 }

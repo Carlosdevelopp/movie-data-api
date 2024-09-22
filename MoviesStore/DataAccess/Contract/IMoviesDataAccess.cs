@@ -19,5 +19,9 @@ namespace DataAccess.Contract
         #region POST
         void InsertMovie(Movies movie);
         #endregion
+
+        #region PUT
+        void UpdateMovie(Movies movie);
+        #endregion
     }
 }

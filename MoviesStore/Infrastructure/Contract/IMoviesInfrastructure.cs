@@ -20,5 +20,9 @@ namespace Infrastructure.Contract
         #region POST
         void InsertMovie(MoviesInsertDTO moviesInsertDTO);
         #endregion
+
+        #region PUT
+        void UpdateMovie(MoviesUpdateDTO moviesUpdateDTO);
+        #endregion
     }
 }

@@ -109,5 +109,22 @@ namespace Infrastructure.Implementation
             _moviesDA.InsertMovie(movie);
         }
         #endregion
+
+        #region PUT
+        public void UpdateMovie(MoviesUpdateDTO moviesUpdateDTO)
+        { 
+            Movies movie = new();
+            {
+                movie.Title = moviesUpdateDTO.TitleMovie;
+                movie.Description = moviesUpdateDTO.DescriptionMovie;
+                movie.RunningTime = moviesUpdateDTO.RunningTimeMovie;
+                movie.Release = moviesUpdateDTO.ReleaseMovie;
+                movie.AwardId = moviesUpdateDTO.AwardId;
+                movie.GenreId = moviesUpdateDTO.GenreId;
+            }
+
+            _moviesDA.UpdateMovie(movie);
+        }
+        #endregion
     }
 }

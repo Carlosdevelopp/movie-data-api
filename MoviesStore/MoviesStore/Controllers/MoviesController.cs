@@ -86,5 +86,21 @@ namespace MoviesStore.Controllers
             }
         }
         #endregion
+
+        #region PUT
+        [HttpPut("UpdateMovie")]
+        public IActionResult UpdateMovie(MoviesUpdateDTO moviesUpdateDTO)
+        {
+            try
+            {
+                _moviesInfrastructure.UpdateMovie(moviesUpdateDTO);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
+        #endregion
     }
 }
