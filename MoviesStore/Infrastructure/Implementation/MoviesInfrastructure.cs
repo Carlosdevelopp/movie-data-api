@@ -112,18 +112,19 @@ namespace Infrastructure.Implementation
 
         #region PUT
         public void UpdateMovie(MoviesUpdateDTO moviesUpdateDTO)
-        { 
-            Movies movie = new();
+        {
+            Movies movies = new();
             {
-                movie.Title = moviesUpdateDTO.TitleMovie;
-                movie.Description = moviesUpdateDTO.DescriptionMovie;
-                movie.RunningTime = moviesUpdateDTO.RunningTimeMovie;
-                movie.Release = moviesUpdateDTO.ReleaseMovie;
-                movie.AwardId = moviesUpdateDTO.AwardId;
-                movie.GenreId = moviesUpdateDTO.GenreId;
-            }
+                movies.MovieId = moviesUpdateDTO.MovieId;
+                movies.Title = moviesUpdateDTO.TitleMovie;
+                movies.Description = moviesUpdateDTO.DescriptionMovie;
+                movies.RunningTime = moviesUpdateDTO.RunningTimeMovie;
+                movies.Release = moviesUpdateDTO.ReleaseMovie;
+                movies.GenreId = moviesUpdateDTO.GenreId;
+                movies.AwardId = moviesUpdateDTO.AwardId;
 
-            _moviesDA.UpdateMovie(movie);
+                _moviesDA.UpdateMovie(movies);
+            }
         }
         #endregion
     }
