@@ -24,5 +24,9 @@ namespace Infrastructure.Contract
         #region PUT
         void UpdateMovie(MoviesUpdateDTO moviesUpdateDTO);
         #endregion
+
+        #region DELETE
+        void DeleteMovie(int movieId);
+        #endregion
     }
 }

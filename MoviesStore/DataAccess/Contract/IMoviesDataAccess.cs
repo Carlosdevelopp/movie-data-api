@@ -23,5 +23,9 @@ namespace DataAccess.Contract
         #region PUT
         void UpdateMovie(Movies movie);
         #endregion
+
+        #region DELETE
+        void DeleteMovie(int movieId);
+        #endregion
     }
 }

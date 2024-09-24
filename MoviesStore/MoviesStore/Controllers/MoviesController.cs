@@ -102,5 +102,21 @@ namespace MoviesStore.Controllers
             }
         }
         #endregion
+
+        #region DELETE
+        [HttpDelete("DeleteMovie")]
+        public IActionResult DeleteMovie(int movieId)
+        {
+            try
+            {
+                _moviesInfrastructure.DeleteMovie(movieId);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
+        #endregion
     }
 }

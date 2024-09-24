@@ -2,6 +2,7 @@
 using DataAccess.Models.Tables;
 using Infrastructure.Contract;
 using Infrastructure.DTO;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,13 +37,13 @@ namespace Infrastructure.Implementation
             };
 
             return movieDTO;
-        } 
+        }
 
         //Get a list of records Movies
         public List<MoviesDTO> GetMovies()
         {
             List<Movies> movies = _moviesDA.GetMovies();
-            
+
             List<MoviesDTO> moviesDTOs = movies.Select(o => new MoviesDTO
             {
                 TituloMovie = o.Title,
@@ -55,7 +56,7 @@ namespace Infrastructure.Implementation
 
             return moviesDTOs;
         }
-        
+
         //Get a record 
         public AwardsDTO GetMovieDetails(int MovieId)
         {
@@ -125,6 +126,13 @@ namespace Infrastructure.Implementation
 
                 _moviesDA.UpdateMovie(movies);
             }
+        }
+        #endregion
+
+        #region DELETE
+        public void DeleteMovie(int movieId)
+        {
+            _moviesDA.DeleteMovie(movieId);
         }
         #endregion
     }
