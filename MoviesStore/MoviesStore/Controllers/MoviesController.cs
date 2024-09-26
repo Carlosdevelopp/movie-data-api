@@ -1,5 +1,4 @@
-﻿using DataAccess.Models.Tables;
-using Infrastructure.Contract;
+﻿using Infrastructure.Contract;
 using Infrastructure.DTO;
 using Microsoft.AspNetCore.Mvc;
 

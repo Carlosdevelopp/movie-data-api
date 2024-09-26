@@ -1,10 +1,5 @@
 ﻿using DataAccess.Models.Tables;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Implementation.Base
 {
@@ -32,13 +27,13 @@ namespace DataAccess.Implementation.Base
 
             // Configuración de claves primarias
             modelBuilder.Entity<Movies>()
-                .HasKey(m => m.MovieId); // Clave primaria para Movies
+                .HasKey(m => m.MovieId); 
 
             modelBuilder.Entity<Awards>()
-                .HasKey(c => c.AwardId); // Clave primaria para Category
+                .HasKey(c => c.AwardId); 
 
             modelBuilder.Entity<Genres>()
-                .HasKey(p => p.GenreId); // Clave primaria para Product
+                .HasKey(p => p.GenreId); 
         }
     }
 }

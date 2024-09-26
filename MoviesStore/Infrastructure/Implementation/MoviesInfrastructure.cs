@@ -2,12 +2,6 @@
 using DataAccess.Models.Tables;
 using Infrastructure.Contract;
 using Infrastructure.DTO;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Implementation
 {
@@ -21,7 +15,7 @@ namespace Infrastructure.Implementation
         }
 
         #region GET
-        //Get a record Movies by (syntax)
+        //This method retrives a movie by its ID and converts it into a MoviesDTO object
         public MoviesDTO GetMovie(int MovieId)
         {
             Movies movie = _moviesDA.GetMovie(MovieId);
@@ -39,7 +33,7 @@ namespace Infrastructure.Implementation
             return movieDTO;
         }
 
-        //Get a list of records Movies
+        //This method retrives a list all movies and the convert at MoviesDTO objects
         public List<MoviesDTO> GetMovies()
         {
             List<Movies> movies = _moviesDA.GetMovies();
@@ -57,7 +51,7 @@ namespace Infrastructure.Implementation
             return moviesDTOs;
         }
 
-        //Get a record 
+        //This method gets details of a movie by its ID and convert AwardsDTO object 
         public AwardsDTO GetMovieDetails(int MovieId)
         {
             Movies movies = _moviesDA.GetMovieDetails(MovieId);
@@ -75,7 +69,7 @@ namespace Infrastructure.Implementation
             return _movies;
         }
 
-        //Get a list of records 
+        //This method gets a list movies with detailded information and the convert at at AwardsDTO objects
         public List<AwardsDTO> GetMoviesDetails()
         {
             List<Movies> movies = _moviesDA.GetMoviesDetails();
@@ -96,6 +90,7 @@ namespace Infrastructure.Implementation
         #endregion
 
         #region POST
+        //This method insert a movie at the database using data from MoviesInsertDTO object
         public void InsertMovie(MoviesInsertDTO moviesInsertDTO)
         {
             Movies movie = new();
@@ -112,6 +107,7 @@ namespace Infrastructure.Implementation
         #endregion
 
         #region PUT
+        //This method updates an existing movie in the database using data from the MoviesUpdateDTO object
         public void UpdateMovie(MoviesUpdateDTO moviesUpdateDTO)
         {
             Movies movies = new();
@@ -130,6 +126,7 @@ namespace Infrastructure.Implementation
         #endregion
 
         #region DELETE
+        // This method deletes a movie from the database using the provided movieId.
         public void DeleteMovie(int movieId)
         {
             _moviesDA.DeleteMovie(movieId);

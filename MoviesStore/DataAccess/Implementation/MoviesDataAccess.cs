@@ -2,11 +2,6 @@
 using DataAccess.Implementation.Base;
 using DataAccess.Models.Tables;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Implementation
 {
@@ -20,51 +15,39 @@ namespace DataAccess.Implementation
         }
 
         #region GET
-        //Get a record (Movies)
+        //This method retrieves a movie from the database using the provided movieId.
         public Movies GetMovie(int movieId)
         {
-            Movies movie = (from u in _dbContext.Movies
-                            where u.MovieId == movieId
-                            select u).FirstOrDefault();
-
-            return movie;
+            return _dbContext.Movies.FirstOrDefault(u => u.MovieId == movieId);
         }
 
-        //Get a list of records (Movies)
+        //This method to retrieve all movies from the database
         public List<Movies> GetMovies()
         {
-            List<Movies> movies = (from u in _dbContext.Movies
-                             select u).ToList();
-
-            return movies;
+            return _dbContext.Movies.ToList();
         }
 
-        //Get a record (MovieDetails)
+        //This method retrieves detailed information about a specific movie, including its genres and awards, using the provided movieId.
         public Movies GetMovieDetails(int movieId)
         {
-            Movies moviedetails = (from u in _dbContext.Movies
-                                   where u.MovieId == movieId
-                                   select u).Include(o => o.Awards)
-                                            .Include(o => o.Genres)
-                                            .FirstOrDefault();
-
-            return moviedetails;
+            return _dbContext.Movies
+                             .Include(e => e.Genres)
+                             .Include(e => e.Awards)
+                             .FirstOrDefault(e => e.MovieId == movieId);
         }
 
-        //Get a list of records (MoviesDetails)
+        //This method retrieves detailed information about all movies from the database
         public List<Movies> GetMoviesDetails()
         {
-            List<Movies> moviesdetails = (from u in _dbContext.Movies
-                                          select u)
-                                         .Include(o => o.Awards)
-                                         .Include(o => o.Genres)
-                                         .ToList();
-
-            return moviesdetails;
+            return _dbContext.Movies
+                             .Include(e => e.Genres)
+                             .Include(e => e.Awards)
+                             .ToList();
         }
         #endregion
 
         #region POST
+        //This method inserts a new movie into the database
         public void InsertMovie(Movies movie)
         {
             _dbContext.Movies.Add(movie);
@@ -72,6 +55,7 @@ namespace DataAccess.Implementation
         }
         #endregion
 
+        //This method updates an existing movie in the database
         #region PUT
         public void UpdateMovie(Movies movie)
         {
@@ -80,12 +64,11 @@ namespace DataAccess.Implementation
         }
         #endregion
 
+        //This method deletes a movie from the database based on the provide movieId
         #region DELETE
-        public void DeleteMovie(int movieId) 
+        public void DeleteMovie(int movieId)
         {
-            Movies movie = (from u in _dbContext.Movies
-                            where u.MovieId == movieId
-                            select u).FirstOrDefault();
+            var movie = _dbContext.Movies.Find(movieId);
 
             _dbContext.Remove(movie);
             _dbContext.SaveChanges();
