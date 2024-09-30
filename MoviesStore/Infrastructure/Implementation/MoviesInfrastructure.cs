@@ -79,9 +79,9 @@ namespace Infrastructure.Implementation
                                        select new AwardsDTO
                                        {
                                            TitleMovie = u.Title.FormatTitle(),
-                                           DescriptionMovie = u.Description,
-                                           ReleaseMovie = u.Release.ToString(),
-                                           RunningTimeMovie = u.RunningTime.ToString(),
+                                           DescriptionMovie = u.Description.ToUpper(),
+                                           ReleaseMovie = u.Release.ShortDate(),
+                                           RunningTimeMovie = u.RunningTime.FormatTime(),
                                            Genre = u.Genres.Genre,
                                            Award = u.Awards.AwardTitle
                                        }).ToList();

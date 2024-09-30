@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\infrastructure\\implementation\\moviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\implementation\\moviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\infrastructure\\utils\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\utils\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,32 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MoviesInfrastructure.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "RelativeToolTip": "Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T03:21:56.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Extensions.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Utils\\Extensions.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Utils\\Extensions.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Utils\\Extensions.cs",
-              "RelativeToolTip": "Infrastructure\\Utils\\Extensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T06:32:09.082Z",
-              "EditorCaption": ""
             }
           ]
         }
