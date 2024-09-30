@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Utils
 {
-    public class Extensions
+    public static class Extensions
     {
+        public static string FormatTitle(this string txt)
+        {
+            if (txt == null) throw new ArgumentNullException(nameof(txt));
+            return $"*{txt}*";
+        }
     }
 }

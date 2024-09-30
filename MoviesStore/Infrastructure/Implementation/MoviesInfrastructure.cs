@@ -2,6 +2,7 @@
 using DataAccess.Models.Tables;
 using Infrastructure.Contract;
 using Infrastructure.DTO;
+using Infrastructure.Utils;
 
 namespace Infrastructure.Implementation
 {
@@ -77,7 +78,7 @@ namespace Infrastructure.Implementation
             List<AwardsDTO> _movies = (from u in movies
                                        select new AwardsDTO
                                        {
-                                           TitleMovie = u.Title,
+                                           TitleMovie = u.Title.FormatTitle(),
                                            DescriptionMovie = u.Description,
                                            ReleaseMovie = u.Release.ToString(),
                                            RunningTimeMovie = u.RunningTime.ToString(),
