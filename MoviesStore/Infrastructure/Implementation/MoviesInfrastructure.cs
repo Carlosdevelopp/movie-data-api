@@ -59,7 +59,7 @@ namespace Infrastructure.Implementation
 
             AwardsDTO _movies = new AwardsDTO
             {
-                TitleMovie = movies.Title,
+                TitleMovie = movies.Title.FormatTitle(),
                 DescriptionMovie = movies.Description,
                 RunningTimeMovie = movies.RunningTime.ToString(),
                 ReleaseMovie = movies.Release.ToString(),

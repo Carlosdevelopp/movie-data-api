@@ -6,6 +6,7 @@ namespace MoviesStore.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Produces("application/json")]
     public class MoviesController : ControllerBase
     {
         private readonly IMoviesInfrastructure _moviesInfrastructure;
@@ -16,6 +17,13 @@ namespace MoviesStore.Controllers
         }
 
         #region GET
+        /// <summary>
+        /// Gets a movie by its ID
+        /// </summary>
+        /// <param name="movieId">Númber of movie</param>
+        /// <returns>Object of movie</returns>
+        /// <response code="200">Devuelve la el objeto</response>
+        /// <response code="400">Si el parámetro movieId no se encontró</response>
         [HttpGet("GetMovie")]
         public IActionResult GetMovie(int movieId)
         {
@@ -29,6 +37,12 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Obtiene el pronóstico del tiempo para un número específico de días.
+        /// </summary>
+        /// <returns>Una lista de peliculas.</returns>
+        /// <response code="200">Devuelve la lista de películas solicitada.</response>
+        /// <response code="400">Error</response>
         [HttpGet("GetMovies")]  
         public IActionResult GetMovies()
         {
@@ -42,6 +56,13 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Gets a movie by its ID
+        /// </summary>
+        /// <param name="movieId">Númber of movie</param>
+        /// <returns>Object of movie</returns>
+        /// <response code="200">Devuelve la el objeto</response>
+        /// <response code="400">Si el parámetro movieId no se encontró</response>
         [HttpGet("GetMovieDetails")]
         public IActionResult GetMovieDetails(int movieId) 
         {
@@ -55,6 +76,12 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Obtiene el pronóstico del tiempo para un número específico de días.
+        /// </summary>
+        /// <returns>Una lista de peliculas.</returns>
+        /// <response code="200">Devuelve la lista de películas solicitada.</response>
+        /// <response code="400">Error</response>
         [HttpGet("GetMoviesDetails")]
         public IActionResult GetMoviesDetails()
         {
@@ -71,6 +98,13 @@ namespace MoviesStore.Controllers
         #endregion
 
         #region POST
+        /// <summary>
+        /// Inserta una nueva película en la base de datos.
+        /// </summary>
+        /// <param name="moviesInsertDTO">Objeto que contiene la información de la película a insertar.</param>
+        /// <returns>Un resultado de la acción.</returns>
+        /// <response code="200">Si la película se insertó correctamente.</response>
+        /// <response code="400">Si hubo un error al insertar la película.</response>
         [HttpPost("InsertMovie")]
         public IActionResult InsertMovie(MoviesInsertDTO moviesInsertDTO)
         {
@@ -87,6 +121,13 @@ namespace MoviesStore.Controllers
         #endregion
 
         #region PUT
+        /// <summary>
+        /// Actualiza una nueva película en la base de datos.
+        /// </summary>
+        /// <param name="moviesUpdateDTO">Objeto que contiene la información de la película a insertar.</param>
+        /// <returns>Un resultado de la acción.</returns>
+        /// <response code="200">Si la película se insertó correctamente.</response>
+        /// <response code="400">Si hubo un error al insertar la película.</response>
         [HttpPut("UpdateMovie")]
         public IActionResult UpdateMovie(MoviesUpdateDTO moviesUpdateDTO)
         {
