@@ -35,7 +35,7 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 
-    //Configurar la generación de documentación XML
+    // using System.Reflection;
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
@@ -47,17 +47,21 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddScoped<IMoviesDataAccess,MoviesDataAccess>();
 builder.Services.AddScoped<IMoviesInfrastructure, MoviesInfrastructure>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
+    {
+        options.InjectStylesheet("/swagger-ui/custom.css");
+    });
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

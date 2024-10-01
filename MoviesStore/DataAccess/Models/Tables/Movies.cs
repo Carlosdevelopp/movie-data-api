@@ -10,6 +10,8 @@ namespace DataAccess.Models.Tables
     public class Movies
     {
         public int MovieId { get; set; }
+
+        [Required]
         public string Title { get; set; } 
         public string Description { get; set; }
         public int RunningTime {  get; set; }

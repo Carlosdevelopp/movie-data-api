@@ -22,9 +22,22 @@ namespace MoviesStore.Controllers
         /// </summary>
         /// <param name="movieId">Númber of movie</param>
         /// <returns>Object of movie</returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET /Todo
+        ///     {
+        ///        "id": 1,
+        ///        "name": "Item #1",
+        ///        "isComplete": true
+        ///     }
+        ///
+        /// </remarks>
         /// <response code="200">Devuelve la el objeto</response>
         /// <response code="400">Si el parámetro movieId no se encontró</response>
         [HttpGet("GetMovie")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GetMovie(int movieId)
         {
             try
@@ -144,6 +157,11 @@ namespace MoviesStore.Controllers
         #endregion
 
         #region DELETE
+        /// <summary>
+        /// Deletes a movie of the database.
+        /// </summary>
+        /// <param name="movieId"></param>
+        /// <returns>request</returns>
         [HttpDelete("DeleteMovie")]
         public IActionResult DeleteMovie(int movieId)
         {
