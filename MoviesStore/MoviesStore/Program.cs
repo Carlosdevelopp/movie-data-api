@@ -6,7 +6,6 @@ using Infrastructure.Implementation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 

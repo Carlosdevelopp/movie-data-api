@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Contract;
 using Infrastructure.DTO;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MoviesStore.Controllers
 {
@@ -18,23 +19,25 @@ namespace MoviesStore.Controllers
 
         #region GET
         /// <summary>
-        /// Gets a movie by its ID
+        /// Get a movie by its ID
         /// </summary>
-        /// <param name="movieId">Númber of movie</param>
+        /// <param name="movieId">ID of movie</param>
         /// <returns>Object of movie</returns>
         /// <remarks>
         /// Sample request:
         ///
-        ///     GET /Todo
+        ///     GET / A Movie
         ///     {
-        ///        "id": 1,
-        ///        "name": "Item #1",
-        ///        "isComplete": true
+        ///         "tituloMovie": "string",
+        ///         "descriptionMovie": "string",
+        ///         "runningMovie": int,
+        ///         "releaseMovie": dataTime,
+        ///         "genreId": int,
+        ///         "awardId": int
         ///     }
-        ///
         /// </remarks>
-        /// <response code="200">Devuelve la el objeto</response>
-        /// <response code="400">Si el parámetro movieId no se encontró</response>
+        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="400">Client error</response>
         [HttpGet("GetMovie")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -51,12 +54,27 @@ namespace MoviesStore.Controllers
         }
 
         /// <summary>
-        /// Obtiene el pronóstico del tiempo para un número específico de días.
+        /// Get a list all movies.
         /// </summary>
-        /// <returns>Una lista de peliculas.</returns>
-        /// <response code="200">Devuelve la lista de películas solicitada.</response>
-        /// <response code="400">Error</response>
-        [HttpGet("GetMovies")]  
+        /// <returns>A list objetos of movies.</returns>
+        /// <remarks>
+        ///     Ejemplo de solicitud:
+        ///     
+        ///         GET /api/Movies/GetMovies
+        ///         {
+        ///            "titleMovie": "string",
+        ///            "descriptionMovie": "string",
+        ///            "runningMovie": int,
+        ///            "releaseMovie": "datatime",
+        ///            "genre": int,
+        ///            "award": int
+        ///         }
+        /// </remarks>
+        /// <response code="200">Operation successful and returns the list of movies.</response>
+        /// <response code="400">Client error.</response>
+        [HttpGet("GetMovies")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GetMovies()
         {
             try
@@ -70,12 +88,27 @@ namespace MoviesStore.Controllers
         }
 
         /// <summary>
-        /// Gets a movie by its ID
+        /// Get a moviedetails by its ID
         /// </summary>
-        /// <param name="movieId">Númber of movie</param>
-        /// <returns>Object of movie</returns>
-        /// <response code="200">Devuelve la el objeto</response>
-        /// <response code="400">Si el parámetro movieId no se encontró</response>
+        /// <param name="movieId">ID of moviedetails</param>
+        /// <returns>Object of moviedetails</returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET / A Movie
+        ///     {
+        ///         "tituloMovie": "string",
+        ///         "descriptionMovie": "string",
+        ///         "runningMovie": string,
+        ///         "releaseMovie": string,
+        ///         "genreId": string,
+        ///         "awardId": string
+        ///     }
+        /// </remarks>
+        /// <response code="200">Successful operation and return movieDetails object</response>
+        /// <response code="400">Client error</response>
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("GetMovieDetails")]
         public IActionResult GetMovieDetails(int movieId) 
         {
@@ -90,12 +123,27 @@ namespace MoviesStore.Controllers
         }
 
         /// <summary>
-        /// Obtiene el pronóstico del tiempo para un número específico de días.
+        /// Get a list all moviesdetails.
         /// </summary>
-        /// <returns>Una lista de peliculas.</returns>
-        /// <response code="200">Devuelve la lista de películas solicitada.</response>
-        /// <response code="400">Error</response>
+        /// <returns>A list objects of movies.</returns>
+        /// <remarks>
+        ///     Ejemplo de solicitud:
+        ///     
+        ///         GET /api/Movies/GetMoviesDetails
+        ///         {
+        ///            "titleMovie": "string",
+        ///            "descriptionMovie": "string",
+        ///            "runningMovie": string,
+        ///            "releaseMovie": "string",
+        ///            "genre": string,
+        ///            "award": string
+        ///         }
+        /// </remarks>
+        /// <response code="200">Operation Successful and returns the list of movies.</response>
+        /// <response code="400">Client error.</response>
         [HttpGet("GetMoviesDetails")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GetMoviesDetails()
         {
             try
