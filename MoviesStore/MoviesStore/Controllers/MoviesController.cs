@@ -24,9 +24,9 @@ namespace MoviesStore.Controllers
         /// <param name="movieId">ID of movie</param>
         /// <returns>Object of movie</returns>
         /// <remarks>
-        /// Sample request:
+        /// Request:
         ///
-        ///     GET / A Movie
+        ///     GET /api/Movies/GetMovie
         ///     {
         ///         "tituloMovie": "string",
         ///         "descriptionMovie": "string",
@@ -36,7 +36,7 @@ namespace MoviesStore.Controllers
         ///         "awardId": int
         ///     }
         /// </remarks>
-        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="201">Successful operation and return movie object</response>
         /// <response code="400">Client error</response>
         [HttpGet("GetMovie")]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -58,7 +58,7 @@ namespace MoviesStore.Controllers
         /// </summary>
         /// <returns>A list objetos of movies.</returns>
         /// <remarks>
-        ///     Ejemplo de solicitud:
+        ///  Request:
         ///     
         ///         GET /api/Movies/GetMovies
         ///         {
@@ -70,7 +70,7 @@ namespace MoviesStore.Controllers
         ///            "award": int
         ///         }
         /// </remarks>
-        /// <response code="200">Operation successful and returns the list of movies.</response>
+        /// <response code="201">Operation successful.</response>
         /// <response code="400">Client error.</response>
         [HttpGet("GetMovies")]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -93,9 +93,9 @@ namespace MoviesStore.Controllers
         /// <param name="movieId">ID of moviedetails</param>
         /// <returns>Object of moviedetails</returns>
         /// <remarks>
-        /// Sample request:
+        /// Request:
         ///
-        ///     GET / A Movie
+        ///     GET /api/Movies/GetMovieDetails
         ///     {
         ///         "tituloMovie": "string",
         ///         "descriptionMovie": "string",
@@ -105,7 +105,7 @@ namespace MoviesStore.Controllers
         ///         "awardId": string
         ///     }
         /// </remarks>
-        /// <response code="200">Successful operation and return movieDetails object</response>
+        /// <response code="201">Successful operation and return movieDetails object</response>
         /// <response code="400">Client error</response>
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -139,7 +139,7 @@ namespace MoviesStore.Controllers
         ///            "award": string
         ///         }
         /// </remarks>
-        /// <response code="200">Operation Successful and returns the list of movies.</response>
+        /// <response code="201">Operation Successful and returns the list of moviesdetails.</response>
         /// <response code="400">Client error.</response>
         [HttpGet("GetMoviesDetails")]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -160,13 +160,29 @@ namespace MoviesStore.Controllers
 
         #region POST
         /// <summary>
-        /// Inserta una nueva película en la base de datos.
+        /// Insert a movie into the database.
         /// </summary>
-        /// <param name="moviesInsertDTO">Objeto que contiene la información de la película a insertar.</param>
-        /// <returns>Un resultado de la acción.</returns>
-        /// <response code="200">Si la película se insertó correctamente.</response>
-        /// <response code="400">Si hubo un error al insertar la película.</response>
+        /// <param name="moviesInsertDTO">Object to insert.</param>
+        /// <returns>Answer.</returns>
+        /// <remarks>
+        /// Request:
+        ///
+        ///     POST /api/Movies/InsertMovie
+        ///     {
+        ///         "titleMovie": "string",
+        ///         "descriptionMovie": "string",
+        ///         "releaseMovie": "datatime",
+        ///         "runningTimeMovie": int,
+        ///         "genreId": int,
+        ///         "awardId": int
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="201">Successful operation.</response>
+        /// <response code="400">Client error.</response>
         [HttpPost("InsertMovie")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult InsertMovie(MoviesInsertDTO moviesInsertDTO)
         {
             try
@@ -183,13 +199,29 @@ namespace MoviesStore.Controllers
 
         #region PUT
         /// <summary>
-        /// Actualiza una nueva película en la base de datos.
+        /// Update a movie into the data base.
         /// </summary>
-        /// <param name="moviesUpdateDTO">Objeto que contiene la información de la película a insertar.</param>
-        /// <returns>Un resultado de la acción.</returns>
-        /// <response code="200">Si la película se insertó correctamente.</response>
+        /// <param name="moviesUpdateDTO">Object movie to insert.</param>
+        /// <returns>Answer.</returns>
+        /// <remarks>
+        /// Request:
+        ///
+        ///     PUT /api/Movies/UpdateMovie
+        ///     {
+        ///         "movieId": int,
+        ///         "titleMovie": "string",
+        ///         "descriptionMovie": "string",
+        ///         "releaseMovie": "datatime",
+        ///         "runningTimeMovie": int,
+        ///         "genreId": int,
+        ///         "awardId": int
+        ///     }
+        /// </remarks>
+        /// <response code="200">Successful operation.</response>
         /// <response code="400">Si hubo un error al insertar la película.</response>
         [HttpPut("UpdateMovie")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult UpdateMovie(MoviesUpdateDTO moviesUpdateDTO)
         {
             try
@@ -206,11 +238,23 @@ namespace MoviesStore.Controllers
 
         #region DELETE
         /// <summary>
-        /// Deletes a movie of the database.
+        /// Delete a movie by its ID.
         /// </summary>
-        /// <param name="movieId"></param>
-        /// <returns>request</returns>
+        /// <param name="movieId">ID of the movie to be deleted.</param>
+        /// <returns>Answer.</returns>
+        /// <remarks>
+        /// Request:
+        ///
+        ///     DELETE /api/Movies/DeleteMovie
+        ///     {
+        ///         "movieId": int
+        ///     }
+        /// </remarks>
+        /// <response code="200">Successful operation.</response>
+        /// <response code="400">Client error.</response>
         [HttpDelete("DeleteMovie")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult DeleteMovie(int movieId)
         {
             try

@@ -5,22 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|solutionrelative:moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF66B298-AAC1-4453-B509-19F009834415}|DataAccess\\DataAccess.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\dataaccess\\implementation\\moviesdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF66B298-AAC1-4453-B509-19F009834415}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\implementation\\moviesdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\infrastructure\\dto\\awardsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dto\\awardsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\infrastructure\\contract\\imoviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\contract\\imoviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\infrastructure\\implementation\\moviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\implementation\\moviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,56 +25,8 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AwardsDTO.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\DTO\\AwardsDTO.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DTO\\AwardsDTO.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\DTO\\AwardsDTO.cs",
-              "RelativeToolTip": "Infrastructure\\DTO\\AwardsDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T04:11:23.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IMoviesInfrastructure.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Contract\\IMoviesInfrastructure.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Contract\\IMoviesInfrastructure.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Contract\\IMoviesInfrastructure.cs",
-              "RelativeToolTip": "Infrastructure\\Contract\\IMoviesInfrastructure.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAlwBEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T04:00:33.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MoviesDataAccess.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\DataAccess\\Implementation\\MoviesDataAccess.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Implementation\\MoviesDataAccess.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\DataAccess\\Implementation\\MoviesDataAccess.cs",
-              "RelativeToolTip": "DataAccess\\Implementation\\MoviesDataAccess.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:44:25.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MoviesInfrastructure.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "RelativeToolTip": "Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAowDsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:27:44.336Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
@@ -100,7 +36,7 @@
               "RelativeDocumentMoniker": "MoviesStore\\Controllers\\MoviesController.cs",
               "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
               "RelativeToolTip": "MoviesStore\\Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAIwHAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T02:31:15.11Z",
               "EditorCaption": ""
