@@ -9,6 +9,18 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Definir políticas de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 // Add services to the container.
 builder.Services.AddControllers();
 
@@ -43,7 +55,7 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MOVIE_DB_CONNECTION")));
 
 //Registro de servicios
-builder.Services.AddScoped<IMoviesDataAccess,MoviesDataAccess>();
+builder.Services.AddScoped<IMoviesDataAccess, MoviesDataAccess>();
 builder.Services.AddScoped<IMoviesInfrastructure, MoviesInfrastructure>();
 
 var app = builder.Build();
@@ -52,15 +64,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
-    {
-        options.InjectStylesheet("/swagger-ui/custom.css");
-    });
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+app.UseCors();
 
 app.UseAuthorization();
 
