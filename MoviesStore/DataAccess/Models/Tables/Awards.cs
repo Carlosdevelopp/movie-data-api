@@ -9,7 +9,9 @@ namespace DataAccess.Models.Tables
 {
     public class Awards
     {
+        [Required]
         public int AwardId { get; set; }
+        [Required]
         public string AwardTitle { get; set; }
         public virtual ICollection<Movies> Movies {  get; set; }
     }

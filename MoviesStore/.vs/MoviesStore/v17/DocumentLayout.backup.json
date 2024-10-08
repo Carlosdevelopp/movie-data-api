@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\moviesstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|solutionrelative:moviesstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\moviesstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|solutionrelative:moviesstore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\infrastructure\\implementation\\moviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\implementation\\moviesinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|solutionrelative:moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,36 +26,32 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MoviesInfrastructure.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "RelativeToolTip": "Infrastructure\\Implementation\\MoviesInfrastructure.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAowBcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T19:16:21.332Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\appsettings.json",
+              "RelativeDocumentMoniker": "MoviesStore\\appsettings.json",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\appsettings.json*",
+              "RelativeToolTip": "MoviesStore\\appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-08T06:59:34.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Program.cs",
-              "RelativeDocumentMoniker": "MoviesStore\\Program.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Program.cs",
-              "RelativeToolTip": "MoviesStore\\Program.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "MoviesStore\\Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "MoviesStore\\Controllers\\MoviesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T06:10:33.883Z",
+              "WhenOpened": "2024-10-08T06:57:20.418Z",
               "EditorCaption": ""
             }
           ]

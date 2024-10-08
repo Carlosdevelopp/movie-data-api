@@ -1,7 +1,6 @@
 ﻿using Infrastructure.Contract;
 using Infrastructure.DTO;
 using Microsoft.AspNetCore.Mvc;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MoviesStore.Controllers
 {

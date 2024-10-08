@@ -60,7 +60,7 @@ namespace Infrastructure.Implementation
             AwardsDTO _movies = new AwardsDTO
             {
                 TitleMovie = movies.Title.FormatTitle(),
-                DescriptionMovie = movies.Description,
+                DescriptionMovie = movies.Description.ToUpper(),
                 RunningTimeMovie = movies.RunningTime.ToString(),
                 ReleaseMovie = movies.Release.ToString(),
                 Genre = movies.Genres.Genre,
@@ -98,8 +98,8 @@ namespace Infrastructure.Implementation
             {
                 movie.Title = moviesInsertDTO.TitleMovie;
                 movie.Description = moviesInsertDTO.DescriptionMovie;
-                movie.RunningTime = moviesInsertDTO.RunningTimeMovie;
                 movie.Release = moviesInsertDTO.ReleaseMovie;
+                movie.RunningTime = moviesInsertDTO.RunningTimeMovie;
                 movie.GenreId = moviesInsertDTO.Genre;
                 movie.AwardId = moviesInsertDTO.Award;
             }
