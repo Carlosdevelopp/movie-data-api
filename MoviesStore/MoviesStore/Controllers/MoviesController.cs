@@ -10,7 +10,6 @@ namespace MoviesStore.Controllers
     public class MoviesController : ControllerBase
     {
         private readonly IMoviesInfrastructure _moviesInfrastructure;
-
         public MoviesController(IMoviesInfrastructure moviesInfrastructure)
         {
             _moviesInfrastructure = moviesInfrastructure;
