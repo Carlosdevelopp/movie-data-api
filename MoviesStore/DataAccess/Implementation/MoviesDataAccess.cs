@@ -55,8 +55,9 @@ namespace DataAccess.Implementation
         }
         #endregion
 
-        //This method updates an existing movie in the database
+
         #region PUT
+        //This method updates an existing movie in the database
         public void UpdateMovie(Movies movie)
         {
             _dbContext.Movies.Update(movie);
@@ -64,8 +65,8 @@ namespace DataAccess.Implementation
         }
         #endregion
 
-        //This method deletes a movie from the database based on the provide movieId
         #region DELETE
+        //This method deletes a movie from the database based on the provide movieId
         public void DeleteMovie(int movieId)
         {
             var movie = _dbContext.Movies.Find(movieId);
