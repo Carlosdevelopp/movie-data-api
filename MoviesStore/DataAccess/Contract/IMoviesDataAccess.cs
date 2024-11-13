@@ -21,6 +21,7 @@ namespace DataAccess.Contract
         #region POST
         //Insert a movie at database 
         void InsertMovie(Movies movie);
+        void InsertGenre(Genres genre);
         #endregion
 
         #region PUT

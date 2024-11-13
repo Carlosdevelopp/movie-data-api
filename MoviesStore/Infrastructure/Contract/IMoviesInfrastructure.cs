@@ -21,6 +21,7 @@ namespace Infrastructure.Contract
         //Inserts a new movie into the database using the MoviesInsertDTO object
         #region POST
         void InsertMovie(MoviesInsertDTO moviesInsertDTO);
+        void InsertGenre(GenresDTO genreInsertDTO);
         #endregion
 
         #region PUT

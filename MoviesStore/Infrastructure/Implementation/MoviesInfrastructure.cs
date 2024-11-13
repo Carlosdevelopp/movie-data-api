@@ -105,6 +105,15 @@ namespace Infrastructure.Implementation
             }
             _moviesDA.InsertMovie(movie);
         }
+
+        public void InsertGenre(GenresDTO genreInsertDTO)
+        {
+            Genres genre = new();
+            {
+                genre.Genre = genreInsertDTO.Genre;
+            };
+            _moviesDA.InsertGenre(genre);
+        }
         #endregion
 
         #region PUT

@@ -53,6 +53,11 @@ namespace DataAccess.Implementation
             _dbContext.Movies.Add(movie);
             _dbContext.SaveChanges();
         }
+        public void InsertGenre(Genres genre)
+        {
+            _dbContext.Genres.Add(genre);
+            _dbContext.SaveChanges();
+        }
         #endregion
 
 

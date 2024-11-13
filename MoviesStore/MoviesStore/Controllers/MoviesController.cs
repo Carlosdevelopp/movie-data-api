@@ -193,6 +193,22 @@ namespace MoviesStore.Controllers
                 return BadRequest("Error");
             }
         }
+
+        [HttpPost("InsertGenre")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult InsertGenre(GenresDTO genreDTO)
+        {
+            try
+            {
+                _moviesInfrastructure.InsertGenre(genreDTO);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("error");
+            }
+        }
         #endregion
 
         #region PUT
