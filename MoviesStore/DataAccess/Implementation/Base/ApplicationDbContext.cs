@@ -10,6 +10,7 @@ namespace DataAccess.Implementation.Base
         //DbSet para las entidades
         public DbSet<Movies> Movies { get; set; }
         public DbSet<Genres> Genres {  get; set; }
+        public DbSet<Awards> Awards { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

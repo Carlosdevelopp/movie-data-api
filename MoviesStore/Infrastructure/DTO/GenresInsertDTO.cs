@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.DTO
 {
-    public class GenresDTO
+    public class GenresInsertDTO
     {
         public string Genre { get; set; }
     }

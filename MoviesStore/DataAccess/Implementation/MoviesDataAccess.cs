@@ -8,7 +8,6 @@ namespace DataAccess.Implementation
     public class MoviesDataAccess : IMoviesDataAccess
     {
         private readonly ApplicationDbContext _dbContext; 
-
         public MoviesDataAccess(ApplicationDbContext dbContex)
         {
             _dbContext = dbContex;
@@ -53,13 +52,21 @@ namespace DataAccess.Implementation
             _dbContext.Movies.Add(movie);
             _dbContext.SaveChanges();
         }
+
+        //This method inserts a new into the database
         public void InsertGenre(Genres genre)
         {
             _dbContext.Genres.Add(genre);
             _dbContext.SaveChanges();
         }
-        #endregion
 
+        //This method inserts a new into the database
+        public void InsertAward(Awards award)
+        {
+            _dbContext.Awards.Add(award);
+            _dbContext.SaveChanges();
+        }
+        #endregion
 
         #region PUT
         //This method updates an existing movie in the database

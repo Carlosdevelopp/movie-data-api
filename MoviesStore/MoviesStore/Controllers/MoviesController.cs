@@ -194,14 +194,46 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Insert a genre into the database.
+        /// </summary>
+        /// <param name="genresInsertDTO">Object to insert.</param>
+        /// <returns>Answer.</returns>
+        /// <remarks>
+        /// Request:
+        ///
+        ///     POST /api/Movies/InsertGenre
+        ///     {
+        ///         "genre": "string"
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="201">Successful operation.</response>
+        /// <response code="400">Client error.</response>
         [HttpPost("InsertGenre")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult InsertGenre(GenresDTO genreDTO)
+        public IActionResult InsertGenre(GenresInsertDTO genresInsertDTO)
         {
             try
             {
-                _moviesInfrastructure.InsertGenre(genreDTO);
+                _moviesInfrastructure.InsertGenre(genresInsertDTO);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("error");
+            }
+        }
+
+        [HttpPost("InsertAward")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult InsertAward(AwardsInsertDTO awardInsertDTO)
+        {
+            try
+            {
+                _moviesInfrastructure.InsertAward(awardInsertDTO);
                 return Ok();
             }
             catch (Exception)

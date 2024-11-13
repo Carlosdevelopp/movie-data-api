@@ -106,13 +106,23 @@ namespace Infrastructure.Implementation
             _moviesDA.InsertMovie(movie);
         }
 
-        public void InsertGenre(GenresDTO genreInsertDTO)
+        //This method inerts a Genre at the database using data from GernresInsertDTO object
+        public void InsertGenre(GenresInsertDTO genreInsertDTO)
         {
             Genres genre = new();
             {
                 genre.Genre = genreInsertDTO.Genre;
             };
             _moviesDA.InsertGenre(genre);
+        }
+        //This method inserts a Award at the database using data from AwardInsertDTO
+        public void InsertAward(AwardsInsertDTO awardsInsertDTO)
+        {
+            Awards award = new();
+            {
+                award.AwardTitle = awardsInsertDTO.AwardTitle;
+            };
+            _moviesDA.InsertAward(award);
         }
         #endregion
 

@@ -18,10 +18,13 @@ namespace Infrastructure.Contract
         List<AwardsDTO> GetMoviesDetails();
         #endregion
 
-        //Inserts a new movie into the database using the MoviesInsertDTO object
         #region POST
+        //Inserts a new movie into the database using the MoviesInsertDTO object
         void InsertMovie(MoviesInsertDTO moviesInsertDTO);
-        void InsertGenre(GenresDTO genreInsertDTO);
+        //Inserts a new genre into the database using the GenresInsertDTO object
+        void InsertGenre(GenresInsertDTO genreInsertDTO);
+        //Inserts a new award into the database using the AwardsInsertDTO object
+        void InsertAward(AwardsInsertDTO awardsInsertDTO);
         #endregion
 
         #region PUT
