@@ -10,6 +10,7 @@ namespace MoviesStore.Controllers
     public class MoviesController : ControllerBase
     {
         private readonly IMoviesInfrastructure _moviesInfrastructure;
+
         public MoviesController(IMoviesInfrastructure moviesInfrastructure)
         {
             _moviesInfrastructure = moviesInfrastructure;
@@ -226,6 +227,22 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Insert a award into the database.
+        /// </summary>
+        /// <param name="awardInsertDTO">Object to insert.</param>
+        /// <returns>Answer.</returns>
+        /// <remarks>
+        /// Request:
+        ///
+        ///     POST /api/Movies/InsertAward
+        ///     {
+        ///         "awardTitle": "string"
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="201">Successful operation.</response>
+        /// <response code="400">Client error.</response>
         [HttpPost("InsertAward")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -234,6 +251,38 @@ namespace MoviesStore.Controllers
             try
             {
                 _moviesInfrastructure.InsertAward(awardInsertDTO);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("error");
+            }
+        }
+
+        /// <summary>
+        /// Insert a award into the database.
+        /// </summary>
+        /// <param name="actorsInsertDTO">Object to insert.</param>
+        /// <returns>Answer.</returns>
+        /// <remarks>
+        /// Request:
+        ///
+        ///     POST /api/Movies/InsertActor
+        ///     {
+        ///         "fullName": "string"
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="201">Successful operation.</response>
+        /// <response code="400">Client error.</response>
+        [HttpPost("InsertActor")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult InsertActor(ActorsInsertDTO actorsInsertDTO)
+        {
+            try
+            {
+                _moviesInfrastructure.InsertActor(actorsInsertDTO);
                 return Ok();
             }
             catch (Exception)

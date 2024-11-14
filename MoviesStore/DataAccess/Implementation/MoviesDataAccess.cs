@@ -53,17 +53,24 @@ namespace DataAccess.Implementation
             _dbContext.SaveChanges();
         }
 
-        //This method inserts a new into the database
+        //This method inserts a new record into the database
         public void InsertGenre(Genres genre)
         {
             _dbContext.Genres.Add(genre);
             _dbContext.SaveChanges();
         }
 
-        //This method inserts a new into the database
+        //This method inserts a new record into the database
         public void InsertAward(Awards award)
         {
             _dbContext.Awards.Add(award);
+            _dbContext.SaveChanges();
+        }
+
+        //This method inserts a new record into the database
+        public void InsertActor(Actors actor)
+        {
+            _dbContext.Actors.Add(actor);
             _dbContext.SaveChanges();
         }
         #endregion

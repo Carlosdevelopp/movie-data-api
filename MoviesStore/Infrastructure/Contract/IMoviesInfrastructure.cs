@@ -25,6 +25,8 @@ namespace Infrastructure.Contract
         void InsertGenre(GenresInsertDTO genreInsertDTO);
         //Inserts a new award into the database using the AwardsInsertDTO object
         void InsertAward(AwardsInsertDTO awardsInsertDTO);
+        //Inserts a new a Actor into the database using the ActorsInsertDTO object
+        void InsertActor(ActorsInsertDTO actorsInsertDTO);
         #endregion
 
         #region PUT

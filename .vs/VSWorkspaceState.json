@@ -4,8 +4,10 @@
     "\\MoviesStore",
     "\\MoviesStore\\Infrastructure",
     "\\MoviesStore\\Infrastructure\\DTO",
-    "\\MoviesStore\\MoviesStore"
+    "\\MoviesStore\\Infrastructure\\Implementation",
+    "\\MoviesStore\\MoviesStore",
+    "\\MoviesStore\\MoviesStore\\Controllers"
   ],
-  "SelectedNode": "\\MoviesStore\\MoviesStore.sln",
+  "SelectedNode": "\\MoviesStore\\Infrastructure\\Implementation\\MoviesInfrastructure.cs",
   "PreviewInSolutionExplorer": false
 }

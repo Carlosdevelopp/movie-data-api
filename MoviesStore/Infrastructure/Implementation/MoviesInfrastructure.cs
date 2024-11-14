@@ -115,6 +115,7 @@ namespace Infrastructure.Implementation
             };
             _moviesDA.InsertGenre(genre);
         }
+
         //This method inserts a Award at the database using data from AwardInsertDTO
         public void InsertAward(AwardsInsertDTO awardsInsertDTO)
         {
@@ -123,6 +124,16 @@ namespace Infrastructure.Implementation
                 award.AwardTitle = awardsInsertDTO.AwardTitle;
             };
             _moviesDA.InsertAward(award);
+        }
+
+        //This method inserts a Actor at the datbase using data from ActorsInsertDTO
+        public void InsertActor(ActorsInsertDTO actorsInsertDTO) 
+        {
+            Actors actors = new();
+            {
+                actors.FullName = actorsInsertDTO.FullName;
+            };
+            _moviesDA.InsertActor(actors);
         }
         #endregion
 

@@ -23,8 +23,10 @@ namespace DataAccess.Contract
         void InsertMovie(Movies movie);
         //Insert a genre at database
         void InsertGenre(Genres genre);
-        //This a Award at database
+        //Insert a Award at database
         void InsertAward(Awards award);
+        //Insert a Actor at database
+        void InsertActor(Actors actor);
         #endregion
 
         #region PUT
