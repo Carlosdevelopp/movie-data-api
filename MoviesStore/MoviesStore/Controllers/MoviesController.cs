@@ -260,7 +260,7 @@ namespace MoviesStore.Controllers
         }
 
         /// <summary>
-        /// Insert a award into the database.
+        /// Insert a actor into the database.
         /// </summary>
         /// <param name="actorsInsertDTO">Object to insert.</param>
         /// <returns>Answer.</returns>
