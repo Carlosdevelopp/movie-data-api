@@ -88,6 +88,19 @@ namespace Infrastructure.Implementation
 
             return _movies;
         }
+
+        //This methos gets detailsof a award by its ID and convert 
+        public AwardDTO GetAward(int AwardId)
+        {
+            Awards awards = _moviesDA.GetAward(AwardId);
+
+            AwardDTO awardsDTO = new AwardDTO
+            {
+                AwardId = awards.AwardId,
+                AwardTitle = awards.AwardTitle
+            };
+            return awardsDTO;
+        }
         #endregion
 
         #region POST

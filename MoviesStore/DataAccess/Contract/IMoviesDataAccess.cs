@@ -16,6 +16,9 @@ namespace DataAccess.Contract
 
         //Get a list details of all available movie 
         List<Movies> GetMoviesDetails();
+
+        //Get the details of a specific award by its ID
+        Awards GetAward(int AwardId);
         #endregion
 
         #region POST

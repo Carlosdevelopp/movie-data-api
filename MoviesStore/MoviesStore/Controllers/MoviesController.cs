@@ -155,6 +155,36 @@ namespace MoviesStore.Controllers
                 return BadRequest("error");
             }
         }
+
+        /// <summary>
+        /// Get a award by its ID.
+        /// </summary>
+        /// <returns>ID of Awards.</returns>
+        /// <remarks>
+        ///     Ejemplo de solicitud:
+        ///     
+        ///         GET /api/Movies/GetAward
+        ///         {
+        ///             "awardId": int,
+        ///             "awardTitle": "string"
+        ///         }
+        /// </remarks>
+        /// <response code="201">Operation Successful.</response>
+        /// <response code="400">Client error.</response>
+        [HttpGet("GetAward")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetAward(int awardId)
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetAward(awardId));
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
         #endregion
 
         #region POST

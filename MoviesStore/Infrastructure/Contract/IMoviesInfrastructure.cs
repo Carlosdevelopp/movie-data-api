@@ -16,6 +16,9 @@ namespace Infrastructure.Contract
 
         //Retrives a list detailed all movies and returns them as a collection of AwardsDTO objects
         List<AwardsDTO> GetMoviesDetails();
+
+        //Retrives a award by its ID and returns it as a AwardDTO object
+        AwardDTO GetAward(int AwardId);
         #endregion
 
         #region POST

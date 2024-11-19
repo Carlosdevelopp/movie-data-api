@@ -43,6 +43,16 @@ namespace DataAccess.Implementation
                              .Include(e => e.Awards)
                              .ToList();
         }
+
+        //This method returns information about a specific award
+        public Awards GetAward(int AwardId)
+        {
+            Awards awards = (from u in _dbContext.Awards
+                             where u.AwardId == AwardId
+                             select u).FirstOrDefault();
+
+            return awards;
+        }
         #endregion
 
         #region POST
