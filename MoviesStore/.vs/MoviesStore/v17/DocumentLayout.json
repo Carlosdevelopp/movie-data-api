@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|solutionrelative:moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,19 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MoviesController.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
-              "RelativeDocumentMoniker": "MoviesStore\\Controllers\\MoviesController.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
-              "RelativeToolTip": "MoviesStore\\Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAIwKYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T03:45:09.747Z",
-              "EditorCaption": ""
             }
           ]
         }

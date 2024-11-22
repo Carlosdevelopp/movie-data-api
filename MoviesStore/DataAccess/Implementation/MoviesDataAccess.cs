@@ -47,11 +47,7 @@ namespace DataAccess.Implementation
         //This method returns information about a specific award
         public Awards GetAward(int AwardId)
         {
-            Awards awards = (from u in _dbContext.Awards
-                             where u.AwardId == AwardId
-                             select u).FirstOrDefault();
-
-            return awards;
+            return _dbContext.Awards.FirstOrDefault(u => u.AwardId == AwardId);
         }
         #endregion
 
