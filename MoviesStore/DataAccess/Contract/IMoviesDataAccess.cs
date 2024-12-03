@@ -19,6 +19,9 @@ namespace DataAccess.Contract
 
         //Get the details of a specific award by its ID
         Awards GetAward(int AwardId);
+
+        //Get a list of all available genres
+        List<Genres> GetGenres();
         #endregion
 
         #region POST

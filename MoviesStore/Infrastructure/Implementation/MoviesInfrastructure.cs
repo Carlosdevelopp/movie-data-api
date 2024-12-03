@@ -89,7 +89,7 @@ namespace Infrastructure.Implementation
             return _movies;
         }
 
-        //This methos gets detailsof a award by its ID and convert 
+        //This method gets detailsof a award by its ID and convert 
         public AwardDTO GetAward(int AwardId)
         {
             Awards awards = _moviesDA.GetAward(AwardId);
@@ -100,6 +100,17 @@ namespace Infrastructure.Implementation
                 AwardTitle = awards.AwardTitle
             };
             return awardsDTO;
+        }
+
+        //This method gets a list all genres and the convert GenresDTO objects
+        public List<GenresDTO> GetGenres()
+        {
+            var genres = _moviesDA.GetGenres().ToList();
+
+            return genres.Select(u => new GenresDTO
+            {
+                GenreMovie = u.Genre
+            }).ToList();
         }
         #endregion
 

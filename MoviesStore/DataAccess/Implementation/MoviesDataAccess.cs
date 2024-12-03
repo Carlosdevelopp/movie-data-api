@@ -49,6 +49,12 @@ namespace DataAccess.Implementation
         {
             return _dbContext.Awards.FirstOrDefault(u => u.AwardId == AwardId);
         }
+
+        //This method returns information about a specific genre
+        public List<Genres> GetGenres()
+        {
+            return _dbContext.Genres.ToList();
+        }
         #endregion
 
         #region POST

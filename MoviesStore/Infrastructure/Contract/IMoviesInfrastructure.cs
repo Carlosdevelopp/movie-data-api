@@ -19,6 +19,9 @@ namespace Infrastructure.Contract
 
         //Retrives a award by its ID and returns it as a AwardDTO object
         AwardDTO GetAward(int AwardId);
+
+        //Retrives a list of all Genres y returns them as a collection of GenresDTO objects
+        List<GenresDTO> GetGenres();
         #endregion
 
         #region POST

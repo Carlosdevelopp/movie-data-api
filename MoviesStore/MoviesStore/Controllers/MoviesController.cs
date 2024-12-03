@@ -185,6 +185,21 @@ namespace MoviesStore.Controllers
                 return BadRequest("Error");
             }
         }
+
+        [HttpGet("GetGenres")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetGenres()
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetGenres());    
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
         #endregion
 
         #region POST
