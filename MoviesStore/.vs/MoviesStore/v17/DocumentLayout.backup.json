@@ -22,16 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,7 +32,7 @@
               "RelativeDocumentMoniker": "MoviesStore\\Controllers\\MoviesController.cs",
               "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
               "RelativeToolTip": "MoviesStore\\Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAwwLwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAANkAAAAAAAAAAAAuwFIBAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T23:51:13.366Z",
               "EditorCaption": ""
@@ -55,8 +47,7 @@
               "RelativeToolTip": "Infrastructure\\Implementation\\MoviesInfrastructure.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwGsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T23:26:41.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T23:26:41.1Z"
             },
             {
               "$type": "Document",
@@ -68,8 +59,7 @@
               "RelativeToolTip": "DataAccess\\Implementation\\MoviesDataAccess.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAADUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T23:14:10.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T23:14:10.944Z"
             }
           ]
         }
