@@ -22,6 +22,9 @@ namespace DataAccess.Contract
 
         //Get a list of all available genres
         List<Genres> GetGenres();
+
+        // Get a list of all available actors
+        List<Actors> GetActors();
         #endregion
 
         #region POST

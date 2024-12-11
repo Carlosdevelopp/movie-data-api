@@ -55,6 +55,12 @@ namespace DataAccess.Implementation
         {
             return _dbContext.Genres.ToList();
         }
+
+        //This method returns information about a specific genre
+        public List<Actors> GetActors()
+        {
+            return _dbContext.Actors.ToList();
+        }
         #endregion
 
         #region POST
