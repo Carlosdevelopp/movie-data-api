@@ -215,6 +215,21 @@ namespace MoviesStore.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Get a list all actors.
+        /// </summary>
+        /// <returns>A list objects of actors.</returns>
+        /// <remarks>
+        ///     Ejemplo de solicitud:
+        ///     
+        ///         GET /api/Movies/GetActors
+        ///         {
+        ///             "fulllNameActor": "string"
+        ///         }
+        /// </remarks>
+        /// <response code="201">Operation Successful.</response>
+        /// <response code="400">Client error.</response>
         [HttpGet("GetActors")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
