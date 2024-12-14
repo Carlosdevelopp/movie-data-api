@@ -112,6 +112,20 @@ namespace Infrastructure.Implementation
                 GenreMovie = u.Genre
             }).ToList();
         }
+
+        //This method gets a list all Actors and the convert ActorsDTO objects
+        public List<ActorsDTO> GetActors()
+        {
+            var actors = _moviesDA.GetActors().ToList();
+
+            List<ActorsDTO> actorsDTOs = (from u in actors
+                                          select new ActorsDTO
+                                          {
+                                              FullNameActor = u.FullName
+                                          }).ToList();
+
+            return actorsDTOs;
+        }
         #endregion
 
         #region POST

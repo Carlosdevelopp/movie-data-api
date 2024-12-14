@@ -214,6 +214,21 @@ namespace MoviesStore.Controllers
                 return BadRequest("Error");
             }
         }
+
+        [HttpGet("GetActors")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetActors()
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetActors());
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
         #endregion
 
         #region POST
