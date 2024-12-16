@@ -50,13 +50,19 @@ namespace DataAccess.Implementation
             return _dbContext.Awards.FirstOrDefault(u => u.AwardId == AwardId);
         }
 
-        //This method returns information about a specific genre
+        //This method returns information about all genres from the database
         public List<Genres> GetGenres()
         {
             return _dbContext.Genres.ToList();
         }
 
         //This method returns information about a specific genre
+        public Genres GetGenre(int genreId)
+        {
+            return _dbContext.Genres.FirstOrDefault(o => o.GenreId == genreId);
+        }
+
+        //This method returns information about all actors from the database 
         public List<Actors> GetActors()
         {
             return _dbContext.Actors.ToList();
