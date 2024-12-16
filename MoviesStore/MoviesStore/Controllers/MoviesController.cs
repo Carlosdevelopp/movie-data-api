@@ -214,6 +214,35 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Get a genre by its ID.
+        /// </summary>
+        /// <returns>ID of Genres.</returns>
+        /// <remarks>
+        ///     Ejemplo de solicitud:
+        ///     
+        ///         GET /api/Movies/GetGenre
+        ///         {
+        ///             "genreMovie": "string"
+        ///         }
+        /// </remarks>
+        /// <response code="201">Operation Successful.</response>
+        /// <response code="400">Client error.</response>
+        [HttpGet("GetGenre")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult GetGenre(int genreId)
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetGenre(genreId));
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
+
 
         /// <summary>
         /// Get a list all actors.

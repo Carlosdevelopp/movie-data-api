@@ -23,6 +23,9 @@ namespace Infrastructure.Contract
         //Retrives a list of all Genres and returns them as a collection of GenresDTO objects
         List<GenresDTO> GetGenres();
 
+        //Retrives a genre by its ID and returns it as a GenresDTO object 
+        GenresDTO GetGenre(int genreId);
+
         //Retrives a list of all Awards and returns them as a collection of ActorsDTO objects
         List<ActorsDTO> GetActors();
         #endregion

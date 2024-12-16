@@ -114,9 +114,15 @@ namespace Infrastructure.Implementation
         }
 
         //This method retrives a genre by its ID and converts it into a GenresDTO object
-        public GenresDTO GetGenre()
+        public GenresDTO GetGenre(int genreId)
         {
+            Genres genre = _moviesDA.GetGenre(genreId);
 
+            GenresDTO genreDTO = new GenresDTO
+            {
+                GenreMovie = genre.Genre
+            };
+            return genreDTO;
         }
 
         //This method gets a list all Actors and the convert ActorsDTO objects
