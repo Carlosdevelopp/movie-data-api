@@ -94,7 +94,7 @@ namespace Infrastructure.Implementation
         {
             Awards awards = _moviesDA.GetAward(AwardId);
 
-            AwardDTO awardsDTO = new AwardDTO
+            AwardDTO awardsDTO = new()
             {
                 AwardId = awards.AwardId,
                 AwardTitle = awards.AwardTitle
@@ -118,7 +118,7 @@ namespace Infrastructure.Implementation
         {
             Genres genre = _moviesDA.GetGenre(genreId);
 
-            GenresDTO genreDTO = new GenresDTO
+            GenresDTO genreDTO = new()
             {
                 GenreMovie = genre.Genre
             };
@@ -137,6 +137,17 @@ namespace Infrastructure.Implementation
                                           }).ToList();
 
             return actorsDTOs;
+        }
+
+        //This method retrives a Award by its ID and converts it into a ActorsDTO object
+        public ActorsDTO GetActor(int actorId)
+        {
+            Actors actors = _moviesDA.GetActor(actorId);
+
+            return new ActorsDTO
+            {
+                FullNameActor = actors.FullName
+            };
         }
         #endregion
 

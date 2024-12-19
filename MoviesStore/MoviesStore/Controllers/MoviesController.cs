@@ -272,6 +272,18 @@ namespace MoviesStore.Controllers
                 return BadRequest("Error");
             }
         }
+
+        public IActionResult GetActor(int actorId)
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("Error");
+            }
+        }
         #endregion
 
         #region POST

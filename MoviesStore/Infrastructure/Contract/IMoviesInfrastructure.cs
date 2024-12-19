@@ -28,6 +28,9 @@ namespace Infrastructure.Contract
 
         //Retrives a list of all Awards and returns them as a collection of ActorsDTO objects
         List<ActorsDTO> GetActors();
+
+        //Retrives a  actor by its ID and returns it as a ActorsId object
+        ActorsDTO GetActor(int actorId);
         #endregion
 
         #region POST
