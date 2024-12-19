@@ -67,6 +67,12 @@ namespace DataAccess.Implementation
         {
             return _dbContext.Actors.ToList();
         }
+
+        //This method returns information about all genres from the database
+        public Actors GetActor(int actorId)
+        {
+            return _dbContext.Actors.FirstOrDefault( u => u.ActorId == actorId);
+        }
         #endregion
 
         #region POST
@@ -107,6 +113,7 @@ namespace DataAccess.Implementation
             _dbContext.SaveChanges();
         }
         #endregion
+
 
         #region DELETE
         //This method deletes a movie from the database based on the provide movieId
