@@ -294,7 +294,7 @@ namespace MoviesStore.Controllers
         {
             try
             {
-                return Ok();
+                return Ok(_moviesInfrastructure.GetActor(actorId));
             }
             catch (Exception)
             {
