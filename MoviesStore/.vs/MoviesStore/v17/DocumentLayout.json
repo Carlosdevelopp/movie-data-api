@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CD5722E-FE57-43C2-999B-BC149DD04E72}|MoviesStore\\MoviesStore.csproj|solutionrelative:moviesstore\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|c:\\users\\carlo\\source\\repos\\crud_movies_store\\moviesstore\\infrastructure\\dto\\actorsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{699C155F-BE1A-4580-A7D1-47AE88DD4675}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dto\\actorsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MoviesController.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
-              "RelativeDocumentMoniker": "MoviesStore\\Controllers\\MoviesController.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\MoviesStore\\Controllers\\MoviesController.cs",
-              "RelativeToolTip": "MoviesStore\\Controllers\\MoviesController.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAA8wBcBAAAcAAAAAAAAAA==",
+              "Title": "ActorsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\DTO\\ActorsDTO.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DTO\\ActorsDTO.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\CRUD_Movies_Store\\MoviesStore\\Infrastructure\\DTO\\ActorsDTO.cs",
+              "RelativeToolTip": "Infrastructure\\DTO\\ActorsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T15:30:37.915Z",
+              "WhenOpened": "2024-12-21T05:22:45.153Z",
               "EditorCaption": ""
             }
           ]

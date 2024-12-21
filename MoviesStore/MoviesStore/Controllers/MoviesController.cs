@@ -273,6 +273,23 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Get a actor by its ID.
+        /// </summary>
+        /// <returns>A list objects of actor.</returns>
+        /// <remarks>
+        ///     Ejemplo de solicitud:
+        ///     
+        ///         GET /api/Movies/GetActor
+        ///         {
+        ///             "fulllNameActor": "string"
+        ///         }
+        /// </remarks>
+        /// <response code="201">Operation Successful.</response>
+        /// <response code="400">Client error.</response>
+        [HttpGet("GetActor")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult GetActor(int actorId)
         {
             try
