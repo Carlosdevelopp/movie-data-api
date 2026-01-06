@@ -1,3 +1,18 @@
-# ASP.NET Core config
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+
+# ASP.NET Core
 appsettings.json
 appsettings.Development.json
+
+# Publish profiles
+*.pubxml.user
+
+# Git tools
+git-filter-repo/
