@@ -16,3 +16,4 @@ appsettings.Development.json
 
 # Git tools
 git-filter-repo/
+.config/
